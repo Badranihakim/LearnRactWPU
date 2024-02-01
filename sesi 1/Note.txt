@@ -1,0 +1,68 @@
+Imperative dan Declarative Programming
+
+*Imperative Programming menuliskan langkah" yang harus dilakukan (step by step)
+
+*Declarative Programming menuliskan apa yg akan dihasilkan (Comp yg menentukan stepnya)
+
+Permisalan Imperative Programming seperti kita memesan pizza di restoran tetapi dengan mengatakan intruksi membuat pizzanya dari awal hingga jadi tanpa menyebutkan nama makanan nya dari awal, sedangkan Declarative Programming seperti kita memesan Pizza yang ada dimenu menyebutkan nama pizza nya langsung tanpa memerdulikan step by step cara pembuatan nya yang penting pizza yang jadi sesuai dengan pesanan kita
+
+REACT ADALAH UI LIBRARY YANG DECLARATIVE
+
+HOW REACT UPDATES DOM
+1.TRIGGER
+2.RENDER
+3.COMMIT
+
+PREREQUISITE
+html css
+js fundamental
+DOM
+ES6
+Git & CLI
+Nodejs npm
+
+EDITOR SETUP
+ESLint
+
+Konsep utama REACT
+CORE CONCEPT
+-Components
+-Props
+-state
+
+UI yang dipecah menjadi bagian-bagian kecil disebut dengan COMPONENTS
+dengan Components kita bisa membuat sebuah potongan code yg dapat digunakan kembali atau disebut REUSABLE COMPONENTS 
+jika ingin mengubah elemen pada ui kita tinggal mengubah Componentsnya
+
+Components pada react dasarnya adalah sebuah function di javascript, penulisan functionnya diawali dengan huruf besar
+
+lalu functionnya mengembalikan nilai elemen ui, lalu elemen ui itu ditulis pake jsx (jsx=code html yg di compile menjadi js).
+
+Kemudian saat kita ingin merendernya kita panggil seolah" dia adalah tag html seperti (<Header />)
+
+mengirimkan sebuah properti sebagai informasi untuk sebuah Components / disebut props, lalu props ditangkap as a object saat Components dibuat
+
+PROPS REFACTOR
+Destructuring dan ternary operator untuk membuat nilai defaultnya
+|| ternary ( ? = jika | : = else) (condition ? codeIfTrue : codeIfFalse)
+ternary membutuhkan 3 bagian yaitu kondisinya, true, else (untuk else diternary operator itu wajib)
+
+MENAMBAHKAN STATE 
+banyak bagian di halaman yg bisa berubah karena interaksi yg dilakukan user,seperti klik tombol mouse hover dll
+pada react data yg berubah seiring waktu disebut state, lalu kita bisa menambahkan state untuk Components manapun yg kita bikin dan nilai dari state itu bisa kita ubah/berubah ketika kita butuhkan
+untuk menambahkan interaktivitas pada elemen nya, react menggunakan state dan juga event handler
+
+STATE DAN HOOKS
+jika kita membuat suatu button lalu button tersebut diklik akan menambahkan jumlah angkanya sesuai berapa banyak tombol di klik
+lalu HOOKS ini memungkinkan kita untuk menambahkan logic pada komponen kita
+salah satu HOOKS yg populer atau bias digunakan untuk mengelola state adalah setState(), ketika kita panggil dia mengembalikan nilai yg berupa array, dan kita bisa akses isi nya menggunakan Destructuring
+
+Elemen pertama pada arraynya adalah nilai dari statenya, elemen kedua berbentuk function yg bertugas untuk mengubah nilai dari elemen yg pertama tadi
+
+nama functionnya boleh apa saja tapi biasanya diawali keyword set lalu diikuti dengan nama statenya
+kita juga bisa memberi nilai default pada statenya, dengan mengisi argumen pada useState()
+
+STATE UPDATER FUNCTION
+untuk menjalankan nya kita bisa panggil dalam function lain dalam Componentsnya
+misal kita mau mengubah nilai likesnya agar bertambah satu stiap kali diklik dan akan kita jalankan dalam sebuah function handleClick() lalu dalamnya kita panggil setLikes(likes+1)
+lalu kita menampilkan total like nya kedalam button nya
